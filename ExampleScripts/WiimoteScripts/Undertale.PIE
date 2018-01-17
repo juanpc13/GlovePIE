@@ -1,0 +1,17 @@
+﻿Key.Up = Wiimote.Right
+Key.Down = Wiimote.Left
+Key.Left = Wiimote.Up
+Key.Right = Wiimote.Down
+
+Key.Escape = Wiimote.Home
+Key.Z = Wiimote.Two
+Key.X = Wiimote.One
+Key.C = Wiimote.A
+Key.F4 = Wiimote.Plus
+Key.LeftAlt + Key.F1 = Wiimote.Minus
+
+
+
+
+
+

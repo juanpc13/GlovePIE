@@ -1,0 +1,142 @@
+﻿debug = "X="+wiimote.RawAccX+"  Y="+wiimote.RawAccY+"  Z="+wiimote.RawAccZ
+
+///////////////////Control Boca Abajo no hace nada//////////////////////////////
+if  wiimote.RawAccX<1 and wiimote.RawAccY<-9 and wiimote.RawAccZ<1 then
+Wiimote.Led1=false
+Wiimote.Led2=false
+Wiimote.Led3=false
+Wiimote.Led4=false
+else
+
+
+
+
+
+
+///////////////////////////DefaultControlPosition///////////////////////////////
+if wiimote.RawAccZ>=4 then
+
+////////////////////////////////Leds////////////////////////////////////////////
+Wiimote.Led1=true
+Wiimote.Led2=false
+Wiimote.Led3=false
+Wiimote.Led4=true
+
+
+//Direccional mouse y atras y adelante
+mouse.WheelUp = Wiimote.Up
+mouse.WheelDown = Wiimote.Down
+Key.BackSpace = Wiimote.Left
+Key.Tab = Wiimote.Right
+
+//Esc y enter y Inicio y Salir
+key.Enter = Wiimote.A
+Key.Escape = Wiimote.B
+Key.LeftAlt + Key.F4 = Wiimote.A and Wiimote.B
+Key.LeftWindows = Wiimote.Home
+
+//////////////Zoom y Cambiar de programa /////////////////////
+Key.LeftControl+mouse.WheelUp = Wiimote.Plus
+Key.LeftControl+mouse.WheelDown = Wiimote.Minus
+
+LeftAlt+key.Tab=Wiimote.Minus and Wiimote.Plus
+
+
+
+//Mouse
+Mouse.LeftButton = Wiimote.One
+Mouse.RightButton = Wiimote.Two
+Mouse.MiddleButton = Wiimote.One and Wiimote.Two
+
+endif
+
+
+
+
+
+
+
+////////////////Control Horizontal Izquierdo = GameBoy//////////////////////////
+if  wiimote.RawAccZ<4 and wiimote.RawAccX>2.5 then
+
+/////////////////////////////////Leds///////////////////////////////////////////
+Wiimote.Led1=true
+Wiimote.Led2=false
+Wiimote.Led3=false
+Wiimote.Led4=false
+
+///////////////////////////Botones GameboyAdv///////////////////////////////////
+Key.Up = Wiimote.Right
+Key.Down = Wiimote.Left
+Key.Left = Wiimote.Up
+Key.Right = Wiimote.Down
+Key.Z = Wiimote.two
+Key.X = Wiimote.one
+Key.A = Wiimote.home
+Key.BackSpace = Wiimote.b
+Key.S = Wiimote.minus
+Key.Enter = Wiimote.plus
+Key.Space = Wiimote.a
+
+endif
+
+
+
+
+
+//Control Horizontal Derecho = Multimedia
+
+if  wiimote.RawAccZ<4 and wiimote.RawAccX<-2.5 then
+
+//Leds
+Wiimote.Led1=false
+Wiimote.Led2=false
+Wiimote.Led3=false
+Wiimote.Led4=true
+
+//Volumen
+Key.VolumeUp = Wiimote.minus
+Key.VolumeDown = Wiimote.plus
+Key.Mute = Wiimote.home
+
+
+//Play Pausea Adelantar y atrasar
+Key.PlayPause = wiimote.A
+key.MediaStop = wiimote.A and wiimote.B
+
+key.NextTrack = wiimote.Up
+key.PrevTrack = wiimote.Down
+
+
+endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
